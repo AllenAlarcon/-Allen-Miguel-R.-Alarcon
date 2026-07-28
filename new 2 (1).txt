@@ -1,0 +1,12 @@
+ public class Main {
+   public static void main(String[] args) {
+  
+   System.out.println("Hello World");
+  
+   System.out.println("Alarcon, Allen Miguel R.");
+  
+   System.out.println("Grade 11: Acacia");
+
+  }//end of main method
+  
+}// end of class
