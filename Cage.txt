@@ -1,0 +1,65 @@
+package javazoo;
+
+public class Cage {
+	
+	//Attributes
+	private int lenght;
+	private int width;
+	private int height;
+	private boolean isClean;
+	private boolean isCovered;
+	
+	//Constructor
+	public Cage (int lenght, int width, int height) {
+		this.lenght = lenght;
+		this.width = width;
+		this.height = height;
+	}
+
+	//Accessory and Mutators
+	public void setLength(int lenght) {
+		this.lenght = lenght;
+	}
+
+	public int getLenght() {
+		return lenght;
+	}
+
+	public void setLenght(int lenght) {
+		this.lenght = lenght;
+	}
+
+	public int getWidth() {
+		return width;
+	}
+
+	public void setWidth(int width) {
+		this.width = width;
+	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public void setHeight(int height) {
+		this.height = height;
+	}
+
+	public boolean isClean() {
+		return isClean;
+	}
+
+	public void setClean(boolean isClean) {
+		this.isClean = isClean;
+	}
+
+	public boolean isCovered() {
+		return isCovered;
+	}
+
+	public void setCovered(boolean isCovered) {
+		this.isCovered = isCovered;
+	}
+	
+	
+}

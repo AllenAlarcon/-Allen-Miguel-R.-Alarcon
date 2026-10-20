@@ -1,0 +1,62 @@
+package javazoo;
+
+public class JavaZoo {
+
+	   //Attribute
+	private String zooName = "Java Park n Zoo";
+	
+	//Accessory
+	 public String getZooName() {
+		 return this.zooName;
+	 }
+	
+	  //Main Method
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	
+	//Creating individual instances based on the instructions
+		ZooAnimal myFirstAnimal = new ZooAnimal("Leo");
+		Cage myFirstCage = new Cage (10, 5, 8);
+		Zookeeper myFirstZookeeper = new Zookeeper ("John");
+		JavaZoo myJavaZoo = new JavaZoo();
+		
+	//Setting additional sample attributes to demonstrate methods
+		myFirstAnimal.setType("Lion");
+		myFirstAnimal.setAge(5);
+		myFirstAnimal.setHungry(true);
+		
+		myFirstCage.setClean(true);
+		myFirstCage.setCovered(false);
+		
+		myFirstZookeeper.setTitle("Senior Keeper");
+		myFirstZookeeper.setPayRate(23.50);
+		myFirstZookeeper.setDegree(true);
+		
+		
+	//Printing out all the values using accessory methods
+		System.out.println("======ZOO INFORMATION======");
+		System.out.println("            ");
+		System.out.println("ZOO NAME: " + myJavaZoo.getZooName());
+		System.out.println("            ");
+		System.out.println("======ANIMAL INFORMATION======");
+		System.out.println("            ");
+		System.out.println("Animal Name: " + myFirstAnimal.getName());
+		System.out.println("Animal Type: " + myFirstAnimal.getType());
+		System.out.println("Animal Age: " + myFirstAnimal.getAge());
+		System.out.println("Is Hungry? " + myFirstAnimal.isHungry());
+		System.out.println("            ");
+		System.out.println("Cage Dimensions (L x W x H): " + myFirstCage.getLenght() + " x " + myFirstCage.getWidth() + " x " + myFirstCage.getHeight());
+		System.out.println("            ");
+		System.out.println("Is Clean? " + myFirstCage.isClean());
+		System.out.println("Is Covered? " + myFirstCage.isCovered());
+		System.out.println("            ");
+		System.out.println("======ZOOKEEPER INFORMATION======");
+		System.out.println("            ");
+		System.out.println("Zookeeper Name Is: " + myFirstZookeeper.getName());
+		System.out.println("Zookeeper Title: " + myFirstZookeeper.getTitle());
+		System.out.println("Pay Rate: $" + myFirstZookeeper.getPayRate());
+		System.out.println("Has Degree? " + myFirstZookeeper.isDegree());
+
+	}
+
+}
