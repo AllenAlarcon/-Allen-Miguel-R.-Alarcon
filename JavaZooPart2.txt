@@ -1,0 +1,46 @@
+package AlarconJavaZooPart2;
+
+public class JavaZooPart2 {
+    private static String zooName = "Java Park n Zoo";
+
+    public String getZooName() {
+        return zooName;
+    }
+
+    public static void main(String[] args) {
+        // Instantiation
+        ZooAnimal ZooAnimal2 = new ZooAnimal("Chip", "monkey", 5, false);
+        ZooKeeper ZooKeeper2 = new ZooKeeper("Mr. Jackson Rock", "", 15, false, 0);
+        Cage Cage2 = new Cage(15, 20, 15, false, true);
+
+        // 2. Print initial values through accessory methods
+        System.out.println("--- Initial Object Attribute Values ---");
+        System.out.println("      ");
+        System.out.println("ZooAnimal Name:  " + ZooAnimal2.getName() + ", Type: " + ZooAnimal2.getType() + 
+                           ", Age: " + ZooAnimal2.getAge() + ", Hungry: " + ZooAnimal2.ishungry());
+        System.out.println("ZooKeeper Name: Mr. Jackson Rock " + ZooKeeper2.getName() + ", Title: " + ZooKeeper2.getTitle() + 
+                           ", Pay Rate: 15" + ZooKeeper2.getPayRate() + ", Degree: " + ZooKeeper2.hasDegree());
+        System.out.println("Cage Dimensions: " + Cage2.getLength() + " x " + Cage2.getWidth() + " x " + Cage2.getHeight() + 
+                           ", Clean: " + Cage2.isClean() + ", Covered: " + Cage2.isCovered());
+
+        // 3. Invoke all custom and standard methods
+        System.out.println("\n--- Invoking Methods ---");
+        System.out.println("     ");
+        ZooAnimal2.sleep();
+        ZooAnimal2.eat();
+        ZooKeeper2.feedAnimal();
+        ZooKeeper2.cleanCage();
+
+        // 4. Print values through accessory methods after method calls
+        System.out.println("\n--- Attribute Values After Method Calls ---");
+        System.out.println("      ");
+        System.out.println("ZooAnimal Name: " + ZooAnimal2.getName() + ", Type: " + ZooAnimal2.getType() + 
+                           ", Age: " + ZooAnimal2.getAge() + ", Hungry: " + ZooAnimal2.ishungry());
+        System.out.println("ZooKeeper Name: Mr. Jackson Rock " + ZooKeeper2.getName() + ", Title: " + ZooKeeper2.getTitle() + 
+                           ", Pay Rate: 15" + ZooKeeper2.getPayRate() + ", Degree: " + ZooKeeper2.hasDegree());
+        System.out.println("Cage Dimensions: " + Cage2.getLength() + " x " + Cage2.getWidth() + " x " + Cage2.getHeight() + 
+                         ", Clean: " + Cage2.isClean() + ", Covered: " + Cage2.isCovered());
+    
+        
+    }//end of main method
+}//end of class
