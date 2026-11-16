@@ -1,0 +1,35 @@
+package AlarconJavaZooPart3;
+
+public class JavaZoo {
+    public static String zooName = "Java Park n Zoo";
+
+    public static String getZooName() {
+        return zooName;
+    }
+
+    public static void main(String[] args) {
+        // Step 2: Instantiate objects using full-parameter constructors (Page 2)
+        ZooAnimal myZooAnimal = new ZooAnimal("Pecanzo", "elephant", 10, false);
+        ZooKeeper myZooKeeper = new ZooKeeper("Jesper Reed", "Senior Keeper", 25.0, true);
+        Cage myCage = new Cage(10, 10, 10, true, true);
+
+        // Add ZooAnimal object to Cage using setAnimal (Page 2)
+        myCage.setAnimal(myZooAnimal);
+
+        // --- Page 3 Statements ---
+
+        // 1. Display cage information, including animal details
+        myCage.displayCageInfo();
+
+        // 2. ZooKeeper feeds the ZooAnimal "ZooFOOD" (String literal)
+        myZooKeeper.feedAnimal(myZooAnimal, "ZooFOOD: Watermelons");
+
+        // 3. Calculate pay for 5 hours and display message
+        double money = myZooKeeper.payMe(5);
+        System.out.println("The ZooKeeper was paid $" + money + " dollars");
+
+        // 4. Make ZooAnimal sleep for 4 hours
+        myZooAnimal.sleep(4);
+        
+    }//end of main method
+}//end of class

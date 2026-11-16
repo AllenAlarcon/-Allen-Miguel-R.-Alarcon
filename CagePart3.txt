@@ -1,0 +1,50 @@
+package AlarconJavaZooPart3;
+
+public class Cage {
+    private int length;
+    private int width;
+    private int height;
+    private boolean clean;
+    private boolean covered;
+    private ZooAnimal animal; // Attribute association (Page 2)
+
+    public Cage() {
+    }
+
+    public Cage(int length, int width, int height, boolean clean, boolean covered) {
+        super();
+    	this.length = length;
+        this.width = width;
+        this.height = height;
+        this.clean = clean;
+        this.covered = covered;
+    }
+
+    public void setLength(int length) { this.length = length; }
+    public int getLength() { return this.length; }
+
+    public void setWidth(int width) { this.width = width; }
+    public int getWidth() { return this.width; }
+
+    public void setHeight(int height) { this.height = height; }
+    public int getHeight() { return this.height; }
+
+    // setAnimal & getAnimal methods (Page 2)
+    public void setAnimal(ZooAnimal animal) {
+        this.animal = animal;
+    }
+
+    public ZooAnimal getAnimal() {
+        return this.animal;
+    }
+
+    public boolean isClean() { return this.clean; }
+    public boolean isCovered() { return this.covered; }
+
+    // displayCageInfo method (Page 2)
+    public void displayCageInfo() {
+        String animalType = animal.getType();
+        String animalName = animal.getName();
+        System.out.println("This cage has a " + animalType + " named " + animalName + ".");
+    }
+} 
