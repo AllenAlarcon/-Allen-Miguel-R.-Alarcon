@@ -1,0 +1,79 @@
+package AlarconJavaZooPart4V;
+
+public class ZooKeeper {
+	
+	private String name;
+    private String title;
+    private double payRate;
+    private boolean degree;
+
+    // Default Constructor
+    public ZooKeeper() {
+        this.name = "";
+        this.title = "";
+        this.payRate = 0.0;
+        this.degree = false;
+    }
+
+    // Parameterized Constructor
+    public ZooKeeper(String name, String title, double payRate, boolean degree) {
+        this.name = name;
+        this.title = title;
+        this.payRate = payRate;
+        this.degree = degree;
+    }
+
+    // Setters
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setPayRate(double payRate) {
+        this.payRate = payRate;
+    }
+
+    public void setDegree(boolean degree) {
+        this.degree = degree;
+    }
+
+    // Getters
+    public String getName() {
+        return name;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public double getPayRate() {
+        return payRate;
+    }
+
+    public boolean hasDegree() {
+        return degree;
+    }
+
+    // Actions & Methods
+    public void feedAnimal() {
+        System.out.println(name + " is feeding the animals.");
+    }
+
+    public void feedAnimal(ZooAnimal animal, String food) {
+        System.out.println(name + " is feeding " + animal.getName() + " with " + food + ".");
+        animal.eat(food);
+    }
+
+    public void cleanCage() {
+        System.out.println(name + " is cleaning the cage.");
+    }
+
+    public double payMe(int hours) {
+        double totalPay = payRate * hours;
+        System.out.println(name + " earned $" + totalPay + " for " + hours + " hours of work.");
+        return totalPay;
+    }
+}

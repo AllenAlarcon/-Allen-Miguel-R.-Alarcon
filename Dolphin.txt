@@ -1,0 +1,30 @@
+package AlarconJavaZooPart4V;
+
+public class Dolphin extends ZooAnimal {
+	private String trick;
+	
+    public Dolphin (String name, String type, int age, boolean hungry) {
+	super();
+	this.trick = "flip"; 
+}
+    //Constructor
+    
+    public Dolphin() {
+		super();
+		
+    }
+   
+
+    public void performTrick() {
+    	System.out.println(name + " is performing a " + trick + ".");
+     }
+  
+	
+  
+	@Override
+    public void eat(String food) {
+        hungry = false;
+        System.out.println("Dolphins eat lots of fish.");
+        System.out.println(name + " is eating " + food + ".");
+    }
+}

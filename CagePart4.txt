@@ -1,0 +1,92 @@
+package AlarconJavaZooPart4V;
+
+public class Cage {
+    private int length;
+    private int width;
+    private int height;
+    private boolean clean;
+    private boolean covered;
+    private ZooAnimal animal;
+
+    // Default Constructor
+    public Cage() {
+        this.length = 0;
+        this.width = 0;
+        this.height = 0;
+        this.clean = true;
+        this.covered = false;
+        this.animal = null;
+    }
+
+    // Parameterized Constructor
+    public Cage(int length, int width, int height, boolean clean, boolean covered, ZooAnimal animal) {
+        this.length = length;
+        this.width = width;
+        this.height = height;
+        this.clean = clean;
+        this.covered = covered;
+        this.animal = animal;
+    }
+
+    // Setters
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public void setClean(boolean clean) {
+        this.clean = clean;
+    }
+
+    public void setCovered(boolean covered) {
+        this.covered = covered;
+    }
+
+    public void setAnimal(ZooAnimal animal) {
+        this.animal = animal;
+    }
+
+    // Getters
+    public int getLength() {
+        return length;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public boolean isClean() {
+        return clean;
+    }
+
+    public boolean isCovered() {
+        return covered;
+    }
+
+    public ZooAnimal getAnimal() {
+        return animal;
+    }
+
+    // Display Cage Info Method
+    public void displayCageInfo() {
+        System.out.println("Cage Dimensions: " + length + " x " + width + " x " + height);
+        System.out.println("Clean: " + clean);
+        System.out.println("Covered: " + covered);
+        if (animal != null) {
+            System.out.println("Assigned Animal: " + animal.getName() + " (" + animal.getType() + ")");
+        } else {
+            System.out.println("This cage is currently empty.");
+        }
+    }
+}

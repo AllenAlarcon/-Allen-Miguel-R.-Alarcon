@@ -1,0 +1,32 @@
+package AlarconJavaZooPart4V;
+
+public class JavaZoo {
+    private String zooName = "Java Park n Zoo";
+
+    public JavaZoo() {
+    }
+
+    public String getZooName() {
+        return zooName;
+    }
+
+    public static void main(String[] args) {
+    	//TODO Auto-generated method stub
+    	
+        // Instantiate ZooAnimal and Dolphin objects
+        ZooAnimal animal1 = new ZooAnimal("Leo", "Lion", 5, true);
+        ZooAnimal animal2 = new ZooAnimal("Named: Chip", "Monkey", 3, true);
+        Dolphin dolphin1 = new Dolphin("Named: Fred", "Dolphin", 4, true);
+
+
+        // Call eat() methods
+        animal1.eat("zooFOOD: Meat");
+        dolphin1.eat("zooFISH: Tuna");
+
+        // Call performTrick()
+        dolphin1.performTrick();
+
+        // Display animal count
+        System.out.println("There are " + ZooAnimal.getAnimalCounter() + " animals in the JavaZoo.");
+    }//end of main method
+}//end of class
